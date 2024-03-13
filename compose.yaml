@@ -1,0 +1,9 @@
+services:
+  database:
+    image: 'postgres:latest'
+    container_name: money-control
+
+    env_file:
+      - '.env.development'
+    ports:
+      - '5432:5432'
