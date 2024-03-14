@@ -17,7 +17,7 @@ model User {
   email String? @unique
 
   profile Profile?
-  billyng Billyng[]
+  // billyng Billyng[]
 }
 
 model Profile {
@@ -41,9 +41,9 @@ model Billyng {
   price       Float
   category    Category @relation(fields: [categoryId], references: [id])
   categoryId  String
-  user        User     @relation(fields: [userId], references: [id])
-  userId      String
+  // user        User     @relation(fields: [userId], references: [id])
+  // userId      String
+  // @@index([userId])
 
   @@index([categoryId])
-  @@index([userId])
 }
